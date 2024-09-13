@@ -240,7 +240,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart2)
 {
 	if(recvd_data == 't')
 	{
-		HAL_UART_Transmit(huart2, "T", 1, HAL_MAX_DELAY);
+		HAL_UART_Transmit(huart2, 'T', 1, HAL_MAX_DELAY);
 	}
 	HAL_UART_Receive_IT(huart2, &recvd_data, 1);
 
